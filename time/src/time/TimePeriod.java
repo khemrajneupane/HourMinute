@@ -5,11 +5,13 @@ public class TimePeriod {
 	private int hours;
 	private int minutes;
 	private int days;
+	private int weeks;
 
-	TimePeriod(int days,int hours, int minutes) {
+	TimePeriod(int weeks,int days,int hours, int minutes) {
 		this.hours = 0;
 		this.minutes = 0;
 		this.days = 0;
+		this.weeks = 0;
 
 	}
 
@@ -23,6 +25,9 @@ public class TimePeriod {
 	public void addDays(int days) {
 		this.days += days;
 	}
+	public void addWeeks(int weeks) {
+		this.weeks += weeks;
+	}
 
 	public int getHours() {
 		return hours;
@@ -35,9 +40,12 @@ public class TimePeriod {
 	public int getDays() {
 		return days;
 	}
+	public int getWeeks() {
+		return weeks;
+	}
 
 	public String toString() {
-		return this.days +" Days "+this.hours + " Hours & " + this.minutes + " Minutes";
+		return this.weeks +" Weeks "+this.days +" Days "+this.hours + " Hours & " + this.minutes + " Minutes";
 	}
 
 	public void setHours(int hours) {
@@ -50,6 +58,11 @@ public class TimePeriod {
 
 	public void setDays(int days) {
 		this.days = days;
+	}
+
+	
+	public void setWeeks(int weeks) {
+		this.weeks = weeks;
 	}
 
 }
